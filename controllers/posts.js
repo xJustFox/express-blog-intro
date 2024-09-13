@@ -11,9 +11,9 @@ module.exports = {
                     html += `<article style="margin: 30px 0; border-bottom: 1px solid;">
                                 <h1>${title}</h1>
                                 <img style="width: 20%;" src="${img}" alt="">
-                                <ul style="display: flex; list-style: none outside none; margin: 0; padding: 0; text-decoration: underline;">`;
-                    tags.forEach(tag => { html += `<li style="padding-right: 7px;">${tag}</h5>` });
-                    html += `   </ul>
+                                <ul style="display: flex; list-style: none outside none; margin: 0; padding: 0;">
+                                    ${tags.map(tag => `<li style="margin-right: 5px;">#${tag.toLowerCase().replaceAll(' ', '-' )}</li>`).join(' ')}
+                                </ul>
                                 <p>${content}</p>
                             </article>`
                 });

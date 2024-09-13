@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+const posts = require('./controllers/posts.js');
+
+app.get('/', (req, res) => res.send('<h1>Benvenuto nel mio blog!</h1>'));
+
+app.get('/posts', posts.index);
 
 app.listen(port, () => console.log(`Example app listening on http://localhost:${port}`));

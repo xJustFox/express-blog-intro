@@ -8,8 +8,8 @@ module.exports = {
                 let html = `<main>
                                 <a href="/">Back Home</a>`;
                 posts.forEach(({ title, content, img, tags }) => {
-                    html += `<article>
-                                <img src="${img}" alt="">
+                    html += `<article style="margin: 30px 0; border-bottom: 1px solid;">
+                                <img style="width: 20%;" src="${img}" alt="">
                                 <h1>${title}</h1>
                                 <ul style="display: flex; list-style: none outside none; margin: 0; padding: 0; text-decoration: underline;">`;
                     tags.forEach(tag => { html += `<li style="padding-right: 7px;">${tag}</h5>` });

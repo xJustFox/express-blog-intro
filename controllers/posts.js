@@ -27,5 +27,14 @@ module.exports = {
                 })
             }
         })
+    },
+    create: (req, res) => {
+        try {
+            writeJSON('postsDB', [...posts, req.body]);
+            res.send('Post caricato correttamente');
+        } catch (error) {
+            res.send(error);
+        }
+
     }
 }
